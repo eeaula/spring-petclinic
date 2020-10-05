@@ -32,6 +32,15 @@
     <spring-format.version>0.0.25</spring-format.version>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>example-org-artifacts--maven-artifacts</id>
+      <name>example-org-artifacts--maven-artifacts</name>
+      <url>https://example-org-artifacts-${env.AWS_ACCOUNT_ID}.d.codeartifact.eu-west-1.amazonaws.com/maven/maven-artifacts/</url>
+    </repository>
+  </distributionManagement>
+
+
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>

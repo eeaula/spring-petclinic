@@ -5,8 +5,9 @@ phases:
     runtime-versions:
       java: corretto11
   pre_build:
-    - echo Logging in to Amazon ECR...
-    - $(aws ecr get-login --no-include-email  --region $AWS_DEFAULT_REGION)
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email  --region $AWS_DEFAULT_REGION)
   build:
     commands:
       - echo Build started on `date`
